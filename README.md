@@ -1,2 +1,2 @@
 # PASS
-Repository for downloading the PASS dataset
+Repository for the training runs and evaluations in the PASS paper
