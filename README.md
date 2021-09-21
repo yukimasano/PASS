@@ -18,7 +18,7 @@ For downloading the dataset, please visit our [dataset on zenodo](https://zenodo
 You can also download the images from their AWS urls, from [here](https://www.robots.ox.ac.uk/~vgg/research/pass/pass_urls.txt).
 
 ## Pretrained models
-| Pretraining | **Model**                                                              | Epochs | Places205 lin. Acc. | URL                                                                                                              |
+| Pretraining | Method                                                              | Epochs | Places205 lin. Acc. | Model weights                                                                                                              |
 |-------------|------------------------------------------------------------------------|--------|---------------------|------------------------------------------------------------------------------------------------------------------|
 | <span style="color:grey">IN-1k</span>      | [<span style="color:grey">MoCo-v2</span> ](https://github.com/facebookresearch/moco)                   | <span style="color:grey">200</span>    | <span style="color:grey">50.1                |  [<span style="color:grey">R50 weights</span>](https://dl.fbaipublicfiles.com/moco/moco_checkpoints/moco_v2_200ep/moco_v2_200ep_pretrain.pth.tar)|
 | PASS        | [MoCo-v2](https://github.com/facebookresearch/moco)                    | 200    | 52.8                | [R50 weights](https://www.robots.ox.ac.uk/~vgg/research/pass/pretrained_models/moco_v2_200ep.pth.tar)            |
