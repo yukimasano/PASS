@@ -8,7 +8,7 @@
 ## Content
 PASS is a large-scale image dataset that does not include any humans, human parts, or other personally identifiable information that can be used for high-quality pretraining while significantly reducing privacy concerns.
 
-![pass.gif](https://www.robots.ox.ac.uk/~vgg/research/pass/img/background.gif)
+![pass.gif](pass.gif)
 
 ## Download the dataset
 Generally: all information is on our [webpage](https://www.robots.ox.ac.uk/~vgg/research/pass/).
