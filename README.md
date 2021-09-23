@@ -28,6 +28,16 @@ You can also download the images from their AWS urls, from [here](https://www.ro
 | PASS        | [DINO](https://github.com/facebookresearch/dino)                       | 300    | X                    | [ViT S16 weights](https://www.robots.ox.ac.uk/~vgg/research/pass/pretrained_models/dino_deit_300ep_ttemp0o07_warumup30ep_normlayerF.pth.tar)                                                                                                  |
 | PASS        | [MoCo-v2](https://github.com/facebookresearch/moco)                    | 800    |                     | coming soon                                                                                                      |                                                                                             |                               |
 
+## Pretrained models from PyTorch Hub
+```
+import torch
+vits16_100ep = torch.hub.load('yukimasano/PASS:main', 'dino_100ep_vits16')
+vits16 = torch.hub.load('yukimasano/PASS:main', 'dino_vits16')
+r50_swav = torch.hub.load('yukimasano/PASS:main', 'swav_resnet50')
+r50_moco = torch.hub.load('yukimasano/PASS:main', 'moco_resnet50')
+r50_moco_cld = torch.hub.load('yukimasano/PASS:main', 'moco_cld_resnet50')
+```  
+  
 ### Contribute your models
 
 Please let us know if you have a model pretrained on this dataset and I will add this to the list above.
