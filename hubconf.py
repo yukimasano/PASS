@@ -80,3 +80,10 @@ def swav_resnet50(pretrained=True, **kwargs):
         print(msg)
     return model
 
+def clean_ckpt(state_dict):
+    is_moco = any(['module.encoder_q' in k for k in state_dict.keys()])
+    if is_moco:
+        state_dict = {k.replace('module.encoder_q.',''):v for k,v in state_dict.items() if 'encoder_q' in k}
+    else:
+        state_dict = {k.replace('module.',''):v for k,v in state_dict.items()}
+    return state_dict
