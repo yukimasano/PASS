@@ -5,8 +5,6 @@ import vision_transformer as vits
 
 dependencies = ["torch", "torchvision"]
 
-vits16 = torch.hub.load('yukimasano/PASS:main', 'dino_vits16')
-
 def dino_vits16(pretrained=True, **kwargs):
     """
     ViT-Small/16x16 pre-trained with DINO for 300 epochs, teacher-temp=0.07, warmup epochs=30, norm-layer=False
