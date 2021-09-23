@@ -1,5 +1,5 @@
 import torch
-from torchvision.models.resnet import resnet50
+from torchvision.models.resnet import resnet50 as __resnet50
 
 import vision_transformer as vits
 
@@ -41,7 +41,7 @@ def moco_resnet50(pretrained=True, **kwargs):
     """
     ResNet-50 pre-trained with MoCo-v2 for 200epochs
     """
-    model = resnet50(pretrained=False, **kwargs)
+    model = __resnet50(pretrained=False, **kwargs)
     model.fc = torch.nn.Identity()
     if pretrained:
         state_dict = torch.hub.load_state_dict_from_url(
@@ -57,7 +57,7 @@ def moco_cld_resnet50(pretrained=True, **kwargs):
     """
     ResNet-50 pre-trained with MoCo-v2 for 200epochs
     """
-    model = resnet50(pretrained=False, **kwargs)
+    model = __resnet50(pretrained=False, **kwargs)
     model.fc = torch.nn.Identity()
     if pretrained:
         state_dict = torch.hub.load_state_dict_from_url(
@@ -73,7 +73,7 @@ def swav_resnet50(pretrained=True, **kwargs):
     """
     ResNet-50 pre-trained with SwAV for 200 epochs. 2 large crops 6 small ones.
     """
-    model = resnet50(pretrained=False, **kwargs)
+    model = __resnet50(pretrained=False, **kwargs)
     model.fc = torch.nn.Identity()
     if pretrained:
         state_dict = torch.hub.load_state_dict_from_url(
