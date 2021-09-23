@@ -29,7 +29,7 @@ You can also download the images from their AWS urls, from [here](https://www.ro
 | PASS        | [MoCo-v2](https://github.com/facebookresearch/moco)                    | 800    |                     | coming soon                                                                                                      |                                                                                             |                               |
 
 ## Pretrained models from PyTorch Hub
-```
+```python
 import torch
 vits16_100ep = torch.hub.load('yukimasano/PASS:main', 'dino_100ep_vits16')
 vits16 = torch.hub.load('yukimasano/PASS:main', 'dino_vits16')
