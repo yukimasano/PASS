@@ -15,7 +15,7 @@ def dino_vits16(pretrained=True, **kwargs):
             url="https://www.robots.ox.ac.uk/~vgg/research/pass/pretrained_models/dino_deit_300ep_ttemp0o07_warumup30ep_normlayerF.pth.tar",
             map_location="cpu",
         )['teacher']
-        model.load_state_dict(state_dict, strict=True)
+        model.load_state_dict(state_dict, strict=False)
     return model
 
 
@@ -29,7 +29,7 @@ def dino_100ep_vits16(pretrained=True, **kwargs):
             url="https://www.robots.ox.ac.uk/~vgg/research/pass/pretrained_models/dino_deit_100ep.pth.tar",
             map_location="cpu",
         )['teacher']
-        model.load_state_dict(state_dict, strict=True)
+        model.load_state_dict(state_dict, strict=False)
     return model
 
 
