@@ -25,7 +25,7 @@ You can also download the images from their AWS urls, from [here](https://www.ro
 | PASS        | [MoCo-v2-CLD](https://github.com/frank-xwang/CLD-UnsupervisedLearning) | 200    | 53.1                | [R50 weights](https://www.robots.ox.ac.uk/~vgg/research/pass/pretrained_models/moco_v2_CLD_200ep.pth.tar)        |
 | PASS        | [SwAV](https://github.com/facebookresearch/swav)                       | 200    | 55.5                | [R50 weights](https://www.robots.ox.ac.uk/~vgg/research/pass/pretrained_models/swav_200ep.pth.tar)               |
 | PASS        | [DINO](https://github.com/facebookresearch/dino)                       | 100    | X                   | [ViT S16 weights](https://www.robots.ox.ac.uk/~vgg/research/pass/pretrained_models/dino_deit_100ep.pth.tar)      |
-| PASS        | [DINO](https://github.com/facebookresearch/dino)                       | 300    |                     | coming soon                                                                                                      |
+| PASS        | [DINO](https://github.com/facebookresearch/dino)                       | 300    | X                    | [ViT S16 weights](https://www.robots.ox.ac.uk/~vgg/research/pass/pretrained_models/dino_deit_300ep_ttemp0o07_warumup30ep_normlayerF.pth.tar)                                                                                                  |
 | PASS        | [MoCo-v2](https://github.com/facebookresearch/moco)                    | 800    |                     | coming soon                                                                                                      |                                                                                             |                               |
 
 ### Contribute your models
