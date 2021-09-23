@@ -15,6 +15,7 @@ def dino_vits16(pretrained=True, **kwargs):
             url="https://www.robots.ox.ac.uk/~vgg/research/pass/pretrained_models/dino_deit_300ep_ttemp0o07_warumup30ep_normlayerF.pth.tar",
             map_location="cpu",
         )['teacher']
+        state_dict = __clean_ckpt(state_dict)
         msg = model.load_state_dict(state_dict, strict=False)
         print(msg)
     return model
@@ -30,6 +31,7 @@ def dino_100ep_vits16(pretrained=True, **kwargs):
             url="https://www.robots.ox.ac.uk/~vgg/research/pass/pretrained_models/dino_deit_100ep.pth.tar",
             map_location="cpu",
         )['teacher']
+        state_dict = __clean_ckpt(state_dict)
         msg = model.load_state_dict(state_dict, strict=False)
         print(msg)
     return model
@@ -46,6 +48,7 @@ def moco_resnet50(pretrained=True, **kwargs):
             url="https://www.robots.ox.ac.uk/~vgg/research/pass/pretrained_models/moco_v2_200ep.pth.tar",
             map_location="cpu",
         )['state_dict']
+        state_dict = __clean_ckpt(state_dict)
         msg = model.load_state_dict(state_dict, strict=False)
         print(msg)
     return model
@@ -61,6 +64,7 @@ def moco_cld_resnet50(pretrained=True, **kwargs):
             url="https://www.robots.ox.ac.uk/~vgg/research/pass/pretrained_models/moco_v2_CLD_200ep.pth.tar",
             map_location="cpu",
         )['state_dict']
+        state_dict = __clean_ckpt(state_dict)
         msg = model.load_state_dict(state_dict, strict=False)
         print(msg)
     return model
@@ -76,11 +80,12 @@ def swav_resnet50(pretrained=True, **kwargs):
             url="https://www.robots.ox.ac.uk/~vgg/research/pass/pretrained_models/swav_200ep.pth.tar",
             map_location="cpu",
         )['state_dict']
+        state_dict = __clean_ckpt(state_dict)
         msg = model.load_state_dict(state_dict, strict=False)
         print(msg)
     return model
 
-def clean_ckpt(state_dict):
+def __clean_ckpt(state_dict):
     is_moco = any(['module.encoder_q' in k for k in state_dict.keys()])
     if is_moco:
         state_dict = {k.replace('module.encoder_q.',''):v for k,v in state_dict.items() if 'encoder_q' in k}
