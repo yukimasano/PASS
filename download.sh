@@ -1,8 +1,10 @@
 #!/bin/bash
 
 # download files
+echo "downloading dataset tar files"
 for PART in 1 2 3 4 5 6 7 8 9
 do
+   echo "download part" $PART
    curl  https://zenodo.org/record/5501843/files/PASS.tar.part.${PART} --output PASS.tar.part.${PART}
 done
 
