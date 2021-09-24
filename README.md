@@ -13,7 +13,7 @@ PASS is a large-scale image dataset that does not include any humans, human part
 ## Download the dataset
 
 The quickest way:
-```
+```sh
 git clone https://github.com/yukimasano/PASS
 cd PASS
 source download.sh # maybe change the directory where you want to download it
