@@ -11,6 +11,13 @@ PASS is a large-scale image dataset that does not include any humans, human part
 ![pass.gif](pass.gif)
 
 ## Download the dataset
+
+The quickest way:
+```
+git clone https://github.com/yukimasano/PASS
+cd PASS
+source download.sh # maybe change the directory where you want to download it
+```
 Generally: all information is on our [webpage](https://www.robots.ox.ac.uk/~vgg/research/pass/).
 
 For downloading the dataset, please visit our [dataset on zenodo](https://zenodo.org/record/5501843). There you can download it in tar files and find the meta-data.
