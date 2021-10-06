@@ -25,15 +25,17 @@ For downloading the dataset, please visit our [dataset on zenodo](https://zenodo
 You can also download the images from their AWS urls, from [here](https://www.robots.ox.ac.uk/~vgg/research/pass/pass_urls.txt).
 
 ## Pretrained models
-| Pretraining | Method                                                                 | Epochs | IN-1k Acc.  | Places205 Acc. | Model weights                                                                                                                                |
-|-------------|------------------------------------------------------------------------|--------|-------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| (IN-1k)     | [MoCo-v2 ](https://github.com/facebookresearch/moco)                   | 200    | 60.6        | 50.1           | [visit MoCo-v2 repo](https://github.com/facebookresearch/moco#models)                                                                        |
-| PASS        | [MoCo-v2](https://github.com/facebookresearch/moco)                    | 200    | 59.5        | 52.8           | [R50 weights](https://www.robots.ox.ac.uk/~vgg/research/pass/pretrained_models/moco_v2_200ep.pth.tar)                                        |
-| PASS        | [MoCo-v2-CLD](https://github.com/frank-xwang/CLD-UnsupervisedLearning) | 200    | 60.2        | 53.1           | [R50 weights](https://www.robots.ox.ac.uk/~vgg/research/pass/pretrained_models/moco_v2_CLD_200ep.pth.tar)                                    |
-| PASS        | [SwAV](https://github.com/facebookresearch/swav)                       | 200    | 60.8        | 55.5           | [R50 weights](https://www.robots.ox.ac.uk/~vgg/research/pass/pretrained_models/swav_200ep.pth.tar)                                           |
-| PASS        | [DINO](https://github.com/facebookresearch/dino)                       | 100    | 61.3        | 54.6           | [ViT S16 weights](https://www.robots.ox.ac.uk/~vgg/research/pass/pretrained_models/dino_deit_100ep.pth.tar)                                  |
-| PASS        | [DINO](https://github.com/facebookresearch/dino)                       | 300    | 65.0           | 55.7              | [ViT S16 weights](https://www.robots.ox.ac.uk/~vgg/research/pass/pretrained_models/dino_deit_300ep_ttemp0o07_warumup30ep_normlayerF.pth.tar) |
-| PASS        | [MoCo-v2](https://github.com/facebookresearch/moco)                    | 800    |             |                | coming soon                                                                                                                                  |
+| Pretraining | Method                                                                 | Epochs | IN-1k Acc. | Places205 Acc. |                                                                                                                                              |
+|-------------|------------------------------------------------------------------------|--------|------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| (IN-1k)     | [MoCo-v2 ](https://github.com/facebookresearch/moco)                   | 200    | 60.6       | 50.1           | [visit MoCo-v2 repo](https://github.com/facebookresearch/moco#models)                                                                        |
+| PASS        | [MoCo-v2](https://github.com/facebookresearch/moco)                    | 180    | 59.1       | 52.8           | [R50 weights](https://www.robots.ox.ac.uk/~vgg/research/pass/pretrained_models/moco_v2_180ep_of200ep.pth.tar)                                |
+| PASS        | [MoCo-v2](https://github.com/facebookresearch/moco)                    | 200    | 59.5       | 52.8           | [R50 weights](https://www.robots.ox.ac.uk/~vgg/research/pass/pretrained_models/moco_v2_200ep.pth.tar)                                        |
+| PASS        | [MoCo-v2](https://github.com/facebookresearch/moco)                    | 800    | 61.2       | XX             | [R50 weights](https://www.robots.ox.ac.uk/~vgg/research/pass/pretrained_models/moco_v2_800ep.pth.tar)                                        |
+| PASS        | [MoCo-v2-CLD](https://github.com/frank-xwang/CLD-UnsupervisedLearning) | 200    | 60.2       | 53.1           | [R50 weights](https://www.robots.ox.ac.uk/~vgg/research/pass/pretrained_models/moco_v2_CLD_200ep.pth.tar)                                    |
+| PASS        | [SwAV](https://github.com/facebookresearch/swav)                       | 200    | 60.8       | 55.5           | [R50 weights](https://www.robots.ox.ac.uk/~vgg/research/pass/pretrained_models/swav_200ep.pth.tar)                                           |
+| PASS        | [DINO](https://github.com/facebookresearch/dino)                       | 100    | 61.3       | 54.6           | [ViT S16 weights](https://www.robots.ox.ac.uk/~vgg/research/pass/pretrained_models/dino_deit_100ep.pth.tar)                                  |
+| PASS        | [DINO](https://github.com/facebookresearch/dino)                       | 300    | 65.0       | 55.7           | [ViT S16 weights](https://www.robots.ox.ac.uk/~vgg/research/pass/pretrained_models/dino_deit_300ep_ttemp0o07_warumup30ep_normlayerF.pth.tar) |
+|             |                                                                        |        |            |                |                                                                                                                                              |
 
 In the table above we give the download links to the full checkpoints (including momentum encoder etc.) to the models we've trained. 
 For comparison, we include MoCo-v2 trained on ILSVRC-12 ("IN-1k") and report linear probing performance on IN-1k and Places205.
@@ -43,9 +45,9 @@ For comparison, we include MoCo-v2 trained on ILSVRC-12 ("IN-1k") and report lin
 import torch
 vits16_100ep = torch.hub.load('yukimasano/PASS:main', 'dino_100ep_vits16')
 vits16 = torch.hub.load('yukimasano/PASS:main', 'dino_vits16')
-r50_swav = torch.hub.load('yukimasano/PASS:main', 'swav_resnet50')
-r50_moco = torch.hub.load('yukimasano/PASS:main', 'moco_resnet50')
-r50_moco_cld = torch.hub.load('yukimasano/PASS:main', 'moco_cld_resnet50')
+r50_swav_200ep = torch.hub.load('yukimasano/PASS:main', 'swav_resnet50')
+r50_moco_800ep = torch.hub.load('yukimasano/PASS:main', 'moco_resnet50')
+r50_moco_cld_200ep = torch.hub.load('yukimasano/PASS:main', 'moco_cld_resnet50')
 ```  
   
 ### Contribute your models
