@@ -39,6 +39,22 @@ def dino_100ep_vits16(pretrained=True, **kwargs):
 
 def moco_resnet50(pretrained=True, **kwargs):
     """
+    ResNet-50 pre-trained with MoCo-v2 for 800epochs
+    """
+    model = __resnet50(pretrained=False, **kwargs)
+    model.fc = torch.nn.Identity()
+    if pretrained:
+        state_dict = torch.hub.load_state_dict_from_url(
+            url="https://www.robots.ox.ac.uk/~vgg/research/pass/pretrained_models/moco_v2_800ep.pth.tar",
+            map_location="cpu",
+        )['state_dict']
+        state_dict = __clean_ckpt(state_dict)
+        msg = model.load_state_dict(state_dict, strict=False)
+        print(msg)
+    return model
+
+def moco_resnet50_200ep(pretrained=True, **kwargs):
+    """
     ResNet-50 pre-trained with MoCo-v2 for 200epochs
     """
     model = __resnet50(pretrained=False, **kwargs)
