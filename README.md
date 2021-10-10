@@ -49,6 +49,9 @@ r50_swav_200ep = torch.hub.load('yukimasano/PASS:main', 'swav_resnet50')
 r50_moco_800ep = torch.hub.load('yukimasano/PASS:main', 'moco_resnet50')
 r50_moco_cld_200ep = torch.hub.load('yukimasano/PASS:main', 'moco_cld_resnet50')
 ```  
+
+## PASSify your dataset
+In the folder [PASSify](PASSify/README.md) of this repo, you can find automated scripts that try to remove humans from image datasets.
   
 ### Contribute your models
 
