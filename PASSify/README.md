@@ -35,7 +35,7 @@ We start with the face detector as this one is cheaper to run and can be run on 
 ## References
 This work relies on two excellent repos:
 
-The facedetector is from [Retinaface](https://github.com/biubug6/Pytorch_Retinaface)
+The facedetector is from [Retinaface](https://github.com/biubug6/Pytorch_Retinaface) (MIT Licence)
 ```
 @inproceedings{deng2019retinaface,
 title={RetinaFace: Single-stage Dense Face Localisation in the Wild},
@@ -43,7 +43,7 @@ author={Deng, Jiankang and Guo, Jia and Yuxiang, Zhou and Jinke Yu and Irene Kot
 booktitle={arxiv},
 year={2019}
 ```
-The person detector is from [detectron2 repo](https://github.com/facebookresearch/detectron2), specifically, the Cascade-RCNN trained with 3x.
+The person detector is from [detectron2 repo](https://github.com/facebookresearch/detectron2) (Apache Licence), specifically, the Cascade-RCNN trained with 3x.
 ```
 @misc{wu2019detectron2,
 author =       {Yuxin Wu and Alexander Kirillov and Francisco Massa and
