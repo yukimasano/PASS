@@ -1,8 +1,8 @@
 21.09.2021:
-v1: initial release: 1.440.191 images
+v1: initial release: 1,440,191 images
 
 14.10.2021
-v2: Removed 479 images: Thanks to the Know-your-data (https://knowyourdata-tfds.withgoogle.com/#dataset=pass) page (published on the 13.10.2021), we were able to identify 479 further images that contained humans.
+v2: Removed 472 images, now 1,439,719 images. Thanks to the Know-your-data (https://knowyourdata-tfds.withgoogle.com/#dataset=pass) page (published on the 13.10.2021), we were able to identify 472 further images that contained humans.
 Most images that we have removed only contained human depictions (e.g. in newspapers, black-white portraits, ads) in some background, and very few were actual photographs of people (<50). We used KYD to sort images both by face area and face probablity to find all images that were missed in v1.
 We have further added more metadata that will aid further analysis in KYD in the future.
 
