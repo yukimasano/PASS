@@ -6,3 +6,5 @@ v2: Removed 472 images, now 1,439,719 images. Thanks to the Know-your-data (http
 Most images that we have removed only contained human depictions (e.g. in newspapers, black-white portraits, ads) in some background, and very few were actual photographs of people (<50). We used KYD to sort images both by face area and face probablity to find all images that were missed in v1.
 We have further added more metadata that will aid further analysis in KYD in the future.
 
+07.04.2022
+v3: Compared to v2.0 we have removed further 131 images that mostly contained faces, other body parts or images of tattoos.
