@@ -5,7 +5,7 @@ echo "downloading dataset tar files"
 for PART in 0 1 2 3 4 5 6 7 8 9
 do
    echo "download part" $PART
-   curl  https://zenodo.org/record/6421136/files/PASS.${PART}.tar --output PASS.${PART}.tar
+   curl  https://zenodo.org/record/6615455/files/PASS.${PART}.tar --output PASS.${PART}.tar
 done
 
 # extract dataset
